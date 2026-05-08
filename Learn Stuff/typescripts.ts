@@ -31,5 +31,5 @@ const dataLambo: ILambo = {
 
 interface IVehicleToken extends Omit<IVehicle, "id" > {
     id: Object
-}
+    }
 
