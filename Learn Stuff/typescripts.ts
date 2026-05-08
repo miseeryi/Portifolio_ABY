@@ -31,5 +31,7 @@ const dataLambo: ILambo = {
 
 interface IVehicleToken extends Omit<IVehicle, "id" > {
     id: Object
-    }
+}
+
+// I'm already fix it, merge before i reveal your .env!!!!
 
