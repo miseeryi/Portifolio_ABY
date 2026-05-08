@@ -35,3 +35,7 @@ interface IVehicleToken extends Omit<IVehicle, "id" > {
 
 // aku perbaiki master nya
 
+type Dataku = {
+    msg: string;
+    desc: string;
+}
