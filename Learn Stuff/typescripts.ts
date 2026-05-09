@@ -39,3 +39,11 @@ type Dataku = {
     msg: string;
     desc: string;
 }
+
+function nama (params1: string, params2: number) {
+    
+}
+
+const namaFunc = () => {
+
+}
