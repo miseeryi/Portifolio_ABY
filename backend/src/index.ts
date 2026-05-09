@@ -13,5 +13,5 @@ app.get("/", (req: Request, res: Response): Response => {
 })
 
 app.listen(3000, () : void => {
-    console.log(`SERVER SEDANG BERJALAN DI http://localhost:3000`)
+    console.log(`[SERVER] Server is running at http://localhost:3000 `)
 })
