@@ -14,6 +14,10 @@ type TRegister= {
     password: string;
 }
 
+type TActivation={
+    code: string
+}
+
 
 export default {
     async login(req: Request, res: Response) {
@@ -84,10 +88,48 @@ export default {
             }
 
 
-
         }catch(error){
             return res.status(500).json({
                 message:"Terjadi Kesalahan Pada Server",
+                data: error
+            })
+        }
+    },
+    async activationAccount (req: Request, res: Response) {
+
+        try{
+            const {code} = req.body as unknown as TActivation;
+            if(!code){
+                return res.status(404).json({
+                    message:"pls input activation code",
+                    data: null
+                })
+            }
+            const userByActivationCode = await UserModel.findOne({
+                activation_code: code
+            })
+            if (!userByActivationCode){
+                return res.status(404).json({
+                    message:"Activation Code Not Found",
+                    data: null
+                })
+            }
+
+            userByActivationCode.is_active = true
+            userByActivationCode.activation_code = ""
+
+            await userByActivationCode.save()
+
+            return res.status(200).json({
+                message:"Succesfully Activation your Account",
+                data: userByActivationCode
+            })
+            
+            
+
+        }catch(error){
+            return res.status(500).json({
+                message:"Cannot Activate your Account",
                 data: error
             })
         }
