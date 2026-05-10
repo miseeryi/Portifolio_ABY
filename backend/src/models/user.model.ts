@@ -23,14 +23,14 @@ const userSchema = new Schema<IUser>({
         type: Schema.Types.String,
         required: true,
         trim: true,
-        maxLenght: 200
+        maxLength: 200
     },
     username: {
         type: Schema.Types.String,
         unique: true,
         required: true,
         trim: true,
-        maxLenght: 150
+        maxLength: 150
     },
     email: {
         type: Schema.Types.String,
