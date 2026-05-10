@@ -19,6 +19,4 @@ export default {
             data:"alfrby09@gmail.com 08xxxxxxxxx"
         })
     }
-
-
 }
