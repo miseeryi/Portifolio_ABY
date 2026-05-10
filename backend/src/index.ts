@@ -9,7 +9,7 @@ async function init(){
         const app = express();
         
         await connectDB()
-
+        app.use(express.json())
         app.use("/", routes);
         
         app.get("/", (req: Request, res: Response): Response => {
