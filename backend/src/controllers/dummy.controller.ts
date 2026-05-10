@@ -13,7 +13,7 @@ export default {
             data:null
         })
     },
-    kontakAby(req: Request, res: Response){
+    kontak_aby(req: Request, res: Response){
         return res.status(200).json({
             message: "Contact",
             data:"alfrby09@gmail.com 08xxxxxxxxx"

@@ -5,6 +5,6 @@ const dummyRoutes = express.Router()
 
 dummyRoutes.get("/", dummyController.dummy)
 dummyRoutes.get("/odi", dummyController.odi)
-dummyRoutes.get("/kontak-aby", dummyController.kontakAby)
+dummyRoutes.get("/kontak_aby", dummyController.kontak_aby)
 
 export default dummyRoutes;
